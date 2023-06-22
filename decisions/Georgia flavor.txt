@@ -1,0 +1,203 @@
+political_decisions = {
+    deal_with_tca = {
+		picture = national_identity_georgia
+		potential = {
+			is_greater_power = no
+			tag = GEO
+			NOT = { has_country_flag = has_dealt_with_tca }
+		}
+		
+		allow = {
+			is_independant = yes
+            treasury = 200000
+            ideological_thought = 1 
+
+            relation = {
+                who = TCA
+                value = 150
+            }
+		}
+		
+		effect = {
+            TCA = {
+                treasury = 200000
+                capital = 1102
+                relation = {
+                    who = GEO
+                    value = 200
+                }
+
+                1090 = {
+                    remove_core = TCA
+                    secede_province = THIS
+                }
+            }
+
+            capital = 1090
+
+            set_country_flag = has_dealt_with_tca
+		}
+	}
+
+	restoring_national_identity = {
+		picture = national_identity_georgia
+		potential = {
+			is_greater_power = no
+			tag = GEO
+            owns = 1090
+			NOT = { has_country_flag = has_restored_national_identity }
+		}
+		
+		allow = {
+            state_n_government = 1 
+			is_independant = yes
+            treasury = 50000
+		}
+		
+		effect = {
+            ruling_party = GEO_reactionary
+			prestige = 5
+            research_points = 2000
+            treasury = -50000
+
+            any_owned = {
+                any_pop = {
+                    militancy = -3
+                    consciousness = -3
+                }
+            }
+
+            set_country_flag = has_restored_national_identity
+		}
+	}
+
+    georgia_russia_alliance = { 
+		picture = national_identity_georgia
+		potential = {
+			is_greater_power = no
+			tag = GEO
+            exists = RUS
+			NOT = { has_country_flag = has_allied_russia }
+		}
+		
+		allow = {
+			is_independant = yes
+
+            relation = {
+                who = RUS
+                value = 100
+            }
+		}
+		
+		effect = {
+			prestige = 5
+
+			RUS = { 
+                diplomatic_influence = { who = GEO value = 400 }
+                relation = { who = GEO value = 200 }
+                create_alliance = GEO
+            }
+
+			set_country_flag = has_allied_russia
+		}
+	}
+
+    encourage_georgia_population_boom = {
+	    potential = {
+			tag = GEO
+			NOT = { has_country_flag = has_encouraged_geo_pop_boom }
+		}
+		
+		allow = {
+            is_independant = yes
+			treasury = 50000
+            medicine = 1
+		}
+		
+		effect = {
+			prestige = 5
+			add_country_modifier = { 
+				name = georgia_population_boom_mod 
+				duration = 1460 
+			}
+			treasury = -50000
+			set_country_flag = has_encouraged_geo_pop_boom
+		}
+	}
+	
+    reform_georgian_education = {
+        picture = georgian_education_reform
+        potential = {
+            tag = GEO
+            is_independant = yes
+            NOT = { has_country_flag = has_reformed_georgian_education }
+        }
+
+        allow = {
+            treasury = 10000
+            state_n_government = 1
+            positivism = 1
+        }
+
+        effect = {
+            any_pop = { #fix
+                literacy = 0.10
+            }
+
+            treasury = -10000
+			set_country_flag = has_reformed_georgian_education
+        }
+    }
+
+	reform_georgian_army = {
+		picture = georgian_army_reform
+		potential = {
+			tag = GEO
+			NOT = { has_country_flag = has_reformed_georgian_army }
+		}
+		
+		allow = {
+            treasury = 50000
+			is_independant = yes
+		}
+		
+		effect = {
+			prestige = 5
+            badboy = 5
+            activate_technology = army_professionalism
+            small_arms = 10
+            leadership = 20
+
+            define_general = {
+                name = "Grigol Orbeliani"
+                personality = skilled
+                background = old_school
+            }
+
+            TCA = {
+                relation = {
+                    who = GEO
+                    value = -50
+                }
+            }
+
+            RUS = {
+                relation = {
+                    who = GEO
+                    value = -50
+                }
+            }
+
+            TUR = {
+                relation = {
+                    who = GEO
+                    value = -50
+                }
+            }
+
+			treasury = -50000
+			
+			set_country_flag = has_reformed_georgian_army
+		}
+	}
+}
