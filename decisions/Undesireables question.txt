@@ -5,20 +5,16 @@ political_decisions = {
 		
 		potential = {
 			ai = no
-			any_owned_province = {
-				any_pop = {
-					is_accepted_culture = no 
-					is_primary_culture = no
-				}
-			}
 		}
 		
 		allow = {
-			any_owned_province = {
-				any_pop = {
-					is_primary_culture = no
-					is_accepted_culture = no
-					militancy = 5
+			ai = no
+			AND = {
+				any_owned_province = {
+					AND = {
+						has_national_minority = yes
+						average_militancy = 4
+					}
 				}
 			}
 		}
@@ -28,7 +24,6 @@ political_decisions = {
 		effect = {
 			country_event = { id = 100001 days = 0 }
 		}
-		
 	}
 }
 

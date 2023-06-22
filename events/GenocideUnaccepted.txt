@@ -14,20 +14,84 @@ country_event = {
 				limit = {
 					is_primary_culture = no
 					is_accepted_culture = no
-					militancy = 5
+					militancy = 4
 				}
 			
-				reduce_pop = 0.50
+				reduce_pop = 0.2
 			}
-		
-			badboy = 10
 		}
+
+		badboy = 16
 	}
 	
+	option = {
+		name = "The state shall punish the traitors!"
+		any_owned {
+			limit = { is_colonial = no }
+			
+			any_pop = {
+				limit = {
+					is_primary_culture = no
+					is_accepted_culture = no
+					militancy = 4
+				}
+			
+				reduce_pop = 0.60
+			}
+		}
+
+		badboy = 8
+	}
+
+	option = {
+		name = "Show them power!"
+
+		any_owned {
+			limit = { is_colonial = no }
+			
+			any_pop = {
+				limit = {
+					is_primary_culture = no
+					is_accepted_culture = no
+					militancy = 4
+				}
+			
+				reduce_pop = 0.90
+			}
+		}
+
+		badboy = 2
+	}
 	
 	option = {
 		name = "Begin integrating them!"
-		
 
+		any_owned {
+			limit = { is_colonial = no is_primary_culture = no has_national_minority = yes }
+			
+			assimilate = yes
+		}
+
+		badboy = 20
+	}
+	
+	option = {
+		name = "Enslave the traitors!"
+
+		any_owned {
+			limit = { is_colonial = no is_slave = yes }
+			
+			any_pop = {
+				limit = {
+					is_primary_culture = no
+					is_accepted_culture = no
+					militancy = 4
+				}
+			
+				pop_type = slaves
+			}
+		}
+
+		badboy = 10
 	}
 }
