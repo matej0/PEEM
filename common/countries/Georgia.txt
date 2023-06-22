@@ -25,10 +25,10 @@ party = {
 
     social_policy = no_position_set
     economic_policy = laissez_faire
-    trade_policy = protectionism
+    trade_policy = free_trade
     religious_policy = pluralism
-    citizenship_policy = full_citizenship
-    war_policy = pacifism
+    citizenship_policy = limited_citizenship
+    war_policy = anti_military
 }
 
 party = {
@@ -49,7 +49,7 @@ party = {
 party = {
     name = "GEO_anarcho_liberal"
     start_date = 1830.1.1
-    end_date = 2000.1.1
+    end_date = 1900.1.1
 
     ideology = anarcho_liberal
 
@@ -108,49 +108,49 @@ party = {
 
 unit_names = {
     dreadnought = {
-         Aragveti Anacopia Artaani Abkhazeti Bichvinta Batomi Chavchavadze Dmanisi Demetre Ereti Geguti Gelati Kutatsi Kharnabuji
+         Aragveti Anacopia Artaani Abkhazeti Bichvinta Batomi Chavchavadze Dmanisi Demetre Ereti Geguti Gelati Kutaisi Kharnabuji
 
          Lasharisjvari Mtkvari Narikala Ruisi Racha Seti Svaneti Tamar Tbilisi Telavi Tbilisi Tashiri Urbnisi
 
     }
     ironclad = {
-         Aragveti Anacopia Artaani Abkhazeti Bichvinta Batomi Chavchavadze Dmanisi Demetre Ereti Geguti Gelati Kutatsi Kharnabuji
+         Aragveti Anacopia Artaani Abkhazeti Bichvinta Batomi Chavchavadze Dmanisi Demetre Ereti Geguti Gelati Kutaisi Kharnabuji
 
          Lasharisjvari Mtkvari Narikala Ruisi Racha Seti Svaneti Tamar Tbilisi Telavi Tbilisi Tashiri Urbnisi
 
 
     }
     manowar = {
-         Aragveti Anacopia Artaani Abkhazeti Bichvinta Batomi Chavchavadze Dmanisi Demetre Ereti Geguti Gelati Kutatsi Kharnabuji
+         Aragveti Anacopia Artaani Abkhazeti Bichvinta Batomi Chavchavadze Dmanisi Demetre Ereti Geguti Gelati Kutaisi Kharnabuji
 
          Lasharisjvari Mtkvari Narikala Ruisi Racha Seti Svaneti Tamar Tbilisi Telavi Tbilisi Tashiri Urbnisi
 
     }
     cruiser = {
-         Aragveti Anacopia Artaani Abkhazeti Bichvinta Batomi Chavchavadze Dmanisi Demetre Ereti Geguti Gelati Kutatsi Kharnabuji
+         Aragveti Anacopia Artaani Abkhazeti Bichvinta Batomi Chavchavadze Dmanisi Demetre Ereti Geguti Gelati Kutaisi Kharnabuji
 
          Lasharisjvari Mtkvari Narikala Ruisi Racha Seti Svaneti Tamar Tbilisi Telavi Tbilisi Tashiri Urbnisi
     }
     frigate = {
-         Aragveti Anacopia Artaani Abkhazeti Bichvinta Batomi Chavchavadze Dmanisi Demetre Ereti Geguti Gelati Kutatsi Kharnabuji
+         Aragveti Anacopia Artaani Abkhazeti Bichvinta Batomi Chavchavadze Dmanisi Demetre Ereti Geguti Gelati Kutaisi Kharnabuji
 
          Lasharisjvari Mtkvari Narikala Ruisi Racha Seti Svaneti Tamar Tbilisi Telavi Tbilisi Tashiri Urbnisi
 
     }
     monitor = {
-         Aragveti Anacopia Artaani Abkhazeti Bichvinta Batomi Chavchavadze Dmanisi Demetre Ereti Geguti Gelati Kutatsi Kharnabuji
+         Aragveti Anacopia Artaani Abkhazeti Bichvinta Batomi Chavchavadze Dmanisi Demetre Ereti Geguti Gelati Kutaisi Kharnabuji
 
          Lasharisjvari Mtkvari Narikala Ruisi Racha Seti Svaneti Tamar Tbilisi Telavi Tbilisi Tashiri Urbnisi
 
     }
     clipper_transport = {
-
+        
     }
     steam_transport = {
 
     }
     commerce_raider = {
-         Aragveti Anacopia Artaani Abkhazeti Bichvinta Batomi Chavchavadze Dmanisi Demetre Ereti Geguti Gelati Kutatsi Kharnabuji
+         Aragveti Anacopia Artaani Abkhazeti Bichvinta Batomi Chavchavadze Dmanisi Demetre Ereti Geguti Gelati Kutaisi Kharnabuji
 
          Lasharisjvari Mtkvari Narikala Ruisi Racha Seti Svaneti Tamar Tbilisi Telavi Tbilisi Tashiri Urbnisi
 

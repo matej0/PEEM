@@ -67,7 +67,7 @@ country_event = {
 		name = "Begin integrating them!"
 
 		any_owned {
-			limit = { is_colonial = no is_primary_culture = no has_national_minority = yes }
+			limit = { is_colonial = no has_national_minority = yes }
 			
 			assimilate = yes
 		}
