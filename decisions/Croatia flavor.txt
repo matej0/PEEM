@@ -1,5 +1,27 @@
 political_decisions = {
 	
+	encourage_croatia_population_boom = {
+		
+		potential = {
+			tag = CRO
+			NOT = { has_country_flag = has_encouraged_cro_pop_boom }
+		}
+		
+		allow = {
+			money = 100000
+		}
+		
+		effect = {
+			prestige = 25
+			add_country_modifier = { 
+				name = croatia_population_boom_mod 
+				duration = 1460 
+			}
+			treasury = -100000
+			set_country_flag = has_encouraged_cro_pop_boom
+		}
+	}
+	
 	expand_the_croatian_military = {
 		
 		picture = expand_croatian_army
@@ -23,6 +45,8 @@ political_decisions = {
 		
 		effect = {
 			tech_school = army_tech_school
+			set_country_flag = has_expanded_the_croatian_military
+
 		}
 	}
 	
