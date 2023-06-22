@@ -1,0 +1,71 @@
+political_decisions = {
+	
+	expand_the_croatian_military = {
+		
+		picture = expand_croatian_army
+		potential = {
+			is_greater_power = no
+			tag = CRO
+			NOT = { has_country_flag = has_expanded_the_croatian_military }
+		}
+		
+		allow = {
+			army_professionalism = 1
+			prestige = 20
+			military_score = 15
+			
+			OR = {
+				in_sphere = PRU
+				in_sphere = GER
+				in_sphere = NGF
+			}	
+		}
+		
+		effect = {
+			tech_school = army_tech_school
+		}
+	}
+	
+	# appoint the revolutionary party.
+	appoint_the_uhro = {
+		
+		picture = appoint_the_uhro
+		potential = {
+			tag = CRO
+			NOT = { has_country_flag = has_appointed_the_uhro }
+		}
+		
+		allow = {
+			year = 1900
+			mass_politics = 1
+			
+			OR = {
+				GER = { exists = yes }
+				NGF = { exists = yes }
+				PRU = { exists = yes }
+			}
+		}
+		
+		effect = {
+			government = fascist_dictatorship
+			prestige = 50
+			flag = fascist
+			
+			random_country = {
+				limit = {
+					OR = {
+						tag = GER
+						tag = NGF
+						tag = PRU
+					}
+					exists = yes
+				}
+				create_alliance = THIS
+				relation = { who = THIS value = 200 }
+				diplomatic_influence = { who = CRO value = 400 }
+			}
+			
+			set_country_flag = has_appointed_the_uhro
+		}
+	}
+}
