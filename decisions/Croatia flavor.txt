@@ -1,5 +1,34 @@
 political_decisions = {
 	
+	seek_a_german_protector = {
+		picture = croatian_german_protector
+		potential = {
+			tag = CRO
+			NOT = { has_country_flag = has_found_german_protector }
+		}
+		
+		allow = {
+			is_vassal = no
+		}
+		
+		effect = {
+			random_country = {
+				limit = {
+					OR = {
+						tag = GER
+						tag = NGF
+						tag = PRU
+					}
+					exists = yes
+				}
+				create_alliance = THIS
+				relation = { who = THIS value = 200 }
+				diplomatic_influence = { who = CRO value = 400 }
+			}
+			set_country_flag = has_found_german_protector
+		}
+	}
+	
 	encourage_croatia_population_boom = {
 		
 		potential = {
@@ -86,7 +115,6 @@ political_decisions = {
 				}
 				create_alliance = THIS
 				relation = { who = THIS value = 200 }
-				diplomatic_influence = { who = CRO value = 400 }
 			}
 			
 			set_country_flag = has_appointed_the_uhro
