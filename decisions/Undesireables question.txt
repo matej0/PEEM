@@ -1,0 +1,34 @@
+political_decisions = {
+	clean_house_on_the_undesireables = {
+		
+		picture = genocide_custom
+		
+		potential = {
+			ai = no
+			any_owned_province = {
+				any_pop = {
+					is_accepted_culture = no 
+					is_primary_culture = no
+				}
+			}
+		}
+		
+		allow = {
+			any_owned_province = {
+				any_pop = {
+					is_primary_culture = no
+					is_accepted_culture = no
+					militancy = 5
+				}
+			}
+		}
+				
+	
+		# fire up the genocide event.
+		effect = {
+			country_event = { id = 100001 days = 0 }
+		}
+		
+	}
+}
+

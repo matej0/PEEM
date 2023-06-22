@@ -1,0 +1,33 @@
+country_event = {
+	id = 100001
+	title = "Deal with the undesireables!"
+	desc = "At last, the long awaited answer to the question of the undesireables."
+	picture = "genocide_custom_event"
+	is_triggered_only = yes
+	
+	option = {
+		name = "Get rid of them, for good!"
+		any_owned {
+			limit = { is_colonial = no }
+			
+			any_pop = {
+				limit = {
+					is_primary_culture = no
+					is_accepted_culture = no
+					militancy = 5
+				}
+			
+				reduce_pop = 0.50
+			}
+		
+			badboy = 10
+		}
+	}
+	
+	
+	option = {
+		name = "Begin integrating them!"
+		
+
+	}
+}
