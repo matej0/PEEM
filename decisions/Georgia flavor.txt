@@ -9,7 +9,7 @@ political_decisions = {
 		
 		allow = {
 			is_independant = yes
-            treasury = 200000
+            money = 200000
             ideological_thought = 1 
 
             relation = {
@@ -34,7 +34,7 @@ political_decisions = {
             }
 
             capital = 1090
-
+            treasury = -200000
             set_country_flag = has_dealt_with_tca
 		}
 	}
@@ -51,11 +51,10 @@ political_decisions = {
 		allow = {
             state_n_government = 1 
 			is_independant = yes
-            treasury = 50000
+            money = 50000
 		}
 		
 		effect = {
-            ruling_party = GEO_reactionary
 			prestige = 5
             research_points = 2000
             treasury = -50000
@@ -110,7 +109,7 @@ political_decisions = {
 		
 		allow = {
             is_independant = yes
-			treasury = 50000
+			money = 50000
             medicine = 1
 		}
 		
@@ -124,6 +123,33 @@ political_decisions = {
 			set_country_flag = has_encouraged_geo_pop_boom
 		}
 	}
+
+    encourage_georgia_education_boom = {
+	    potential = {
+			tag = GEO
+			NOT = { has_country_flag = has_encouraged_geo_education_boom }
+		}
+		
+		allow = {
+            is_independant = yes
+			money = 20000
+		}
+		
+		effect = {
+			prestige = 2
+			add_country_modifier = { 
+				name = georgia_literacy_boom_mod 
+				duration = 1460 
+			}
+            add_country_modifier = { 
+				name = georgia_reform_boom_mod 
+				duration = 1460 
+			}
+
+			treasury = -20000
+			set_country_flag = has_encouraged_geo_education_boom
+		}
+	}
 	
     reform_georgian_education = {
         picture = georgian_education_reform
@@ -134,7 +160,7 @@ political_decisions = {
         }
 
         allow = {
-            treasury = 10000
+            money = 10000
             state_n_government = 1
             positivism = 1
         }
@@ -144,9 +170,98 @@ political_decisions = {
                 literacy = 0.10
             }
 
+            social_reform = good_schools
+
             treasury = -10000
 			set_country_flag = has_reformed_georgian_education
         }
+    }
+
+    begin_industrialization_georgia = {
+        picture = georgian_industrial_reform
+        potential = {
+            tag = GEO
+            is_independant = yes
+            NOT = { has_country_flag = has_reformed_georgian_industry }
+        }
+
+        allow = {
+            money = 10000
+            mechanical_production = 1
+        }
+
+        effect = {
+            build_factory_in_capital_state = steel_factory
+            prestge = 2
+            treasury = -10000
+
+			set_country_flag = has_reformed_georgian_industry
+        }
+    }
+
+    ambition_for_expansion = {
+        picture = georgian_army_reform
+		potential = {
+			tag = GEO
+			NOT = { has_country_flag = expansion_georgia }
+		}
+		
+		allow = {
+            money = 50000
+			is_independant = yes
+
+            OR = {
+                nationalism_n_imperialism = 1
+                year = 1860
+            }
+		}
+		
+		effect = {
+			prestige = 5
+            badboy = 10
+			
+            1098 = {
+                add_core = GEO
+            }
+
+            1099 = {
+                add_core = GEO
+            }
+
+            1100 = {
+                add_core = GEO
+            }
+
+            1101 = {
+                add_core = GEO
+            }
+
+            1102 = {
+                add_core = GEO
+            }
+
+            1103 = {
+                add_core = GEO
+            }
+
+            1104 = {
+                add_core = GEO
+            }
+
+            1105 = {
+                add_core = GEO
+            }
+
+            1106 = {
+                add_core = GEO
+            }
+
+            1107 = {
+                add_core = GEO
+            }
+
+			set_country_flag = expansion_georgia
+		}
     }
 
 	reform_georgian_army = {
@@ -157,7 +272,7 @@ political_decisions = {
 		}
 		
 		allow = {
-            treasury = 50000
+            money = 50000
 			is_independant = yes
 		}
 		

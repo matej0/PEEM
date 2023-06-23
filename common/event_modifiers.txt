@@ -2571,7 +2571,17 @@ croatia_population_boom_mod = {
 
 ### Georgia ###
 georgia_population_boom_mod = {
-	global_population_growth = 0.20
+	global_population_growth = 0.40
 	global_immigrant_attract = 0.05
+	icon 17
+}
+
+georgia_literacy_boom_mod = {
+	education_efficiency_modifier = 0.5
+	icon 17
+}
+
+georgia_reform_boom_mod = {
+	social_reform_desire = 0.5
 	icon 17
 }
