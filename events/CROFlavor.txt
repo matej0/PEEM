@@ -1,0 +1,5 @@
+country_event = {
+	id = 100002
+	title = "The Bosnian Question"
+	desc = "cum"
+}
