@@ -1,5 +1,42 @@
 country_event = {
 	id = 100002
-	title = "The Bosnian Question"
-	desc = "cum"
+	title = "EVTNAME100002"
+	desc = "EVTDESC100002"
+	fire_only_once = yes
+	
+	trigger = {
+		#	783
+		tag = CRO
+		has_country_flag = has_found_german_protector
+	}
+	
+	mean_time_to_happen = {
+		months = 2
+	}
+	
+	option = {
+		name = "We will have our land back!"
+		
+		random_country = {
+		
+			limit = { 
+				owns = 783 
+			}
+			
+			add_casus_belli = {
+				target = CRO
+				type = acquire_state
+				months = 36
+			}
+		}
+		
+		badboy = 10
+		prestige = 10
+	}
+	
+	option = {
+		name = "Bosnia is no longer ours! And we don't want it any time soon!"
+		badboy = -5
+		prestige = 5
+	}
 }
